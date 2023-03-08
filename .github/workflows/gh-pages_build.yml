@@ -35,3 +35,4 @@ jobs:
         with:
           branch: gh-pages
           folder: src
+          token: ${{ secrets.GITHUB_TOKEN }}
