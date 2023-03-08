@@ -1,5 +1,5 @@
 const BasePath = ''
-const staticfilesPWA = "StaticFiles_v0.1-alpha"
+const staticfilesPWA = "StaticFiles_v0.2.1-alpha"
 
 const assets = [
     `${BasePath}/`,
@@ -8,9 +8,9 @@ const assets = [
     `${BasePath}/static/images/icons/chocolate-doom_icon_x192.png`,
 
     `${BasePath}/websockets-doom.js`,
-    `${BasePath}/doom1.wad`, 
     `${BasePath}/default.cfg`,
     `${BasePath}/websockets-doom.wasm`,
+    `${BasePath}/websockets-doom.wasm.map`,
 
     "https://fonts.gstatic.com/s/vt323/v12/pxiKyp0ihIEF2isfFJXUdVNF.woff2",
 ]
@@ -27,6 +27,7 @@ self.addEventListener("install", installEvent => {
         }).catch(err => console.log("Error opening cache", err))
     )
 })
+
 
 // activate event
 self.addEventListener('activate', evt => {
