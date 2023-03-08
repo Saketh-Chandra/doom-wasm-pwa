@@ -28,6 +28,8 @@ jobs:
 
       - name: Build with Emscripten
         run: |
+          sudo apt install automake libsdl2-dev libsdl2-mixer-dev libsdl2-net-dev -y
+          source ./emsdk_env.sh
           ./scripts/build.sh
 
       - name: Deploy GitHub Pages
