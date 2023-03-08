@@ -15,7 +15,7 @@ jobs:
         with:
           ref: multi_select_doom
 
-      - name: Install Emscripten and dependencies
+      - name: Install Emscripten and dependencies and Build Doom
         run: |
           sudo apt-get update
           sudo apt-get install -y build-essential cmake python3-pip libssl-dev
@@ -25,11 +25,7 @@ jobs:
           ./emsdk install latest
           ./emsdk activate latest
           source ./emsdk_env.sh
-
-      - name: Build with Emscripten
-        run: |
           sudo apt install automake libsdl2-dev libsdl2-mixer-dev libsdl2-net-dev -y
-          source ./emsdk_env.sh
           ./scripts/build.sh
 
       - name: Deploy GitHub Pages
