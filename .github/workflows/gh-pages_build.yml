@@ -28,7 +28,6 @@ jobs:
 
       - name: Build with Emscripten
         run: |
-          cd path/to/your/project
           ./scripts/build.sh
 
       - name: Deploy GitHub Pages
