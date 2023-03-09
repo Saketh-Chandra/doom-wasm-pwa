@@ -26,13 +26,16 @@ jobs:
           ./emsdk activate latest
           source ./emsdk_env.sh
           sudo apt install automake libsdl2-dev libsdl2-mixer-dev libsdl2-net-dev -y
-          ls
-          pwd
           /home/runner/work/doom-wasm-pwa/doom-wasm-pwa/scripts/build.sh
+          mkdir /home/runner/work/doom-wasm-pwa/doom-wasm-pwa/deployment/
+          cp -r /home/runner/work/doom-wasm-pwa/doom-wasm-pwa/src/static /home/runner/work/doom-wasm-pwa/doom-wasm-pwa/deployment/
+          cp -r /home/runner/work/doom-wasm-pwa/doom-wasm-pwa/src/websockets-doom.* /home/runner/work/doom-wasm-pwa/doom-wasm-pwa/deployment/
+          cp /home/runner/work/doom-wasm-pwa/doom-wasm-pwa/src/default.cfg /home/runner/work/doom-wasm-pwa/doom-wasm-pwa/deployment/
+
 
       - name: Deploy GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: src
+          folder: deployment
           token: ${{ secrets.GITHUB_TOKEN }}
