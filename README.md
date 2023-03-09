@@ -43,12 +43,11 @@ Copy the shareware version of [doom1.wad][3] to [./src][9] (make sure it has the
 
 Then:
 
-```
-cd src
+```sh
 python -m http.server
 ```
 
-Then open your browser and point it to http://0.0.0.0:8000/
+Then open your browser and point it to http://0.0.0.0:8000/doom-wasm-pwa/src/
 
 Doom should start (local mode, no network). Check [doom-workers][8] if you want to run multiplayer locally.
 
@@ -103,7 +102,7 @@ FROM python:alpine3.17 AS Final
 COPY --from=builder /usr/doom/doom-wasm-pwa/ doom-wasm-pwa
 
 EXPOSE 8000
-ENTRYPOINT ["python3","-m","http.server","-d","./doom-wasm-pwa/src"]
+ENTRYPOINT ["python3","-m","http.server"]
 ```
 #### Save the Docker Script into Dockerfile
 ### Build:
