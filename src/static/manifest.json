@@ -2,24 +2,24 @@
   "name": "Doom Wasm PWA",
   "short_name": "DOOM",
   "display": "standalone",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "/doom-wasm-pwa/src/",
+  "scope": "/doom-wasm-pwa/src/",
   "theme_color": "#000",
   "background_color": "#3367D6",
   "icons": [
     {
-      "src": "/static/images/icons/chocolate-doom_icon_x512.png",
+      "src": "/doom-wasm-pwa/src/static/images/icons/chocolate-doom_icon_x512.png",
       "type": "image/png",
       "sizes": "512x512"
     },
     {
-      "src": "/static/images/icons/chocolate-doom_icon_x192.png",
+      "src": "/doom-wasm-pwa/src/static/images/icons/chocolate-doom_icon_x192.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "maskable"
     },
     {
-      "src": "/static/images/icons/chocolate-doom_icon_x192.png",
+      "src": "/doom-wasm-pwa/src/static/images/icons/chocolate-doom_icon_x192.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "any"
