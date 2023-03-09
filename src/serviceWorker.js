@@ -1,4 +1,4 @@
-const BasePath = ''
+const BasePath = '/doom-wasm-pwa/src'
 const staticfilesPWA = "StaticFiles_v0.2.1-alpha"
 
 const assets = [

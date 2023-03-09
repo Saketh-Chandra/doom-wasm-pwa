@@ -20,4 +20,3 @@ clean
 src/doom1.wad
 .githelp
 *.wad
-!deployment/**

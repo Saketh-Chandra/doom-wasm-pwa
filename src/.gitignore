@@ -11,3 +11,4 @@ websockets-doom.*
 *.metainfo.xml
 tags
 TAGS
+!/deployment/**

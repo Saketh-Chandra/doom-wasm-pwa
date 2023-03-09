@@ -27,12 +27,13 @@ jobs:
           source ./emsdk_env.sh
           sudo apt install automake libsdl2-dev libsdl2-mixer-dev libsdl2-net-dev -y
           /home/runner/work/doom-wasm-pwa/doom-wasm-pwa/scripts/build.sh
-          mkdir /home/runner/work/doom-wasm-pwa/doom-wasm-pwa/deployment/
-          cp /home/runner/work/doom-wasm-pwa/doom-wasm-pwa/src/serviceWorker.js /home/runner/work/doom-wasm-pwa/doom-wasm-pwa/deployment/
-          cp /home/runner/work/doom-wasm-pwa/doom-wasm-pwa/src/index.html /home/runner/work/doom-wasm-pwa/doom-wasm-pwa/deployment/
-          cp -r /home/runner/work/doom-wasm-pwa/doom-wasm-pwa/src/static /home/runner/work/doom-wasm-pwa/doom-wasm-pwa/deployment/
-          cp -r /home/runner/work/doom-wasm-pwa/doom-wasm-pwa/src/websockets-doom.* /home/runner/work/doom-wasm-pwa/doom-wasm-pwa/deployment/
-          cp /home/runner/work/doom-wasm-pwa/doom-wasm-pwa/src/default.cfg /home/runner/work/doom-wasm-pwa/doom-wasm-pwa/deployment/
+          mkdir /home/runner/work/doom-wasm-pwa/doom-wasm-pwa/src/deployment/
+          mkdir /home/runner/work/doom-wasm-pwa/doom-wasm-pwa/src/deployment/src
+          cp /home/runner/work/doom-wasm-pwa/doom-wasm-pwa/src/serviceWorker.js /home/runner/work/doom-wasm-pwa/doom-wasm-pwa/src/deployment/src
+          cp /home/runner/work/doom-wasm-pwa/doom-wasm-pwa/src/index.html /home/runner/work/doom-wasm-pwa/doom-wasm-pwa/src/deployment/src
+          cp -r /home/runner/work/doom-wasm-pwa/doom-wasm-pwa/src/static /home/runner/work/doom-wasm-pwa/doom-wasm-pwa/src/deployment/src
+          cp -r /home/runner/work/doom-wasm-pwa/doom-wasm-pwa/src/websockets-doom.* /home/runner/work/doom-wasm-pwa/doom-wasm-pwa/src/deployment/src
+          cp /home/runner/work/doom-wasm-pwa/doom-wasm-pwa/src/default.cfg /home/runner/work/doom-wasm-pwa/doom-wasm-pwa/src/deployment/src
 
 
       - name: Deploy GitHub Pages
